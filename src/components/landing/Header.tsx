@@ -1,0 +1,93 @@
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { NAV_LINKS, WA_LINK } from "@/lib/constants";
+import { cn } from "@/lib/utils";
+
+const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <header
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        isScrolled
+          ? "bg-background/95 backdrop-blur-sm shadow-sm py-3"
+          : "bg-transparent py-5"
+      )}
+    >
+      <div className="container mx-auto px-4 lg:px-8">
+        <nav className="flex items-center justify-between">
+          {/* Logo */}
+          <a
+            href="#"
+            className="font-heading text-2xl md:text-3xl font-semibold tracking-wide text-foreground"
+          >
+            Indicann Health
+          </a>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-8">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+            <Button asChild className="rounded-lg px-6">
+              <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+                Agendar Consulta
+              </a>
+            </Button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden p-2 text-foreground"
+            aria-label="Menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </nav>
+
+        {/* Mobile Navigation */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-sm shadow-lg border-t border-border">
+            <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
+              {NAV_LINKS.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-base font-medium text-foreground/80 hover:text-foreground transition-colors py-2"
+                >
+                  {link.label}
+                </a>
+              ))}
+              <Button asChild className="rounded-lg mt-2">
+                <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+                  Agendar Consulta
+                </a>
+              </Button>
+            </div>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
+
+export default Header;

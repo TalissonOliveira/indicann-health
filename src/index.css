@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Analogue';
+  src: url('./assets/fonts/analogue-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Analogue';
+  src: url('./assets/fonts/analogue-italic-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Indicann Health Design System
+   Primary: #2B2438 → HSL(262, 24%, 18%)
+   Secondary: #8D896B → HSL(54, 14%, 48%)
+   Background: #F6F5F7 → HSL(270, 11%, 96%)
+   Support: #D5D4C1 → HSL(57, 21%, 80%)
+*/
+
+@layer base {
+  :root {
+    /* Brand Colors - Indicann Health */
+    --background: 270 11% 96%;
+    --foreground: 262 24% 18%;
+
+    --card: 57 21% 80%;
+    --card-foreground: 262 24% 18%;
+
+    --popover: 270 11% 96%;
+    --popover-foreground: 262 24% 18%;
+
+    --primary: 262 24% 18%;
+    --primary-foreground: 270 11% 96%;
+
+    --secondary: 54 14% 48%;
+    --secondary-foreground: 262 24% 18%;
+
+    --muted: 57 21% 80%;
+    --muted-foreground: 262 24% 30%;
+
+    --accent: 54 14% 48%;
+    --accent-foreground: 262 24% 18%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 57 21% 75%;
+    --input: 57 21% 80%;
+    --ring: 262 24% 18%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 270 11% 96%;
+    --sidebar-foreground: 262 24% 18%;
+    --sidebar-primary: 262 24% 18%;
+    --sidebar-primary-foreground: 270 11% 96%;
+    --sidebar-accent: 57 21% 80%;
+    --sidebar-accent-foreground: 262 24% 18%;
+    --sidebar-border: 57 21% 75%;
+    --sidebar-ring: 262 24% 18%;
+
+    /* Custom tokens */
+    --support: 57 21% 80%;
+    --support-foreground: 262 24% 18%;
+  }
+
+  .dark {
+    --background: 262 24% 10%;
+    --foreground: 270 11% 96%;
+
+    --card: 262 24% 15%;
+    --card-foreground: 270 11% 96%;
+
+    --popover: 262 24% 10%;
+    --popover-foreground: 270 11% 96%;
+
+    --primary: 270 11% 96%;
+    --primary-foreground: 262 24% 18%;
+
+    --secondary: 54 14% 40%;
+    --secondary-foreground: 270 11% 96%;
+
+    --muted: 262 24% 20%;
+    --muted-foreground: 270 11% 80%;
+
+    --accent: 54 14% 40%;
+    --accent-foreground: 270 11% 96%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 262 24% 25%;
+    --input: 262 24% 25%;
+    --ring: 270 11% 96%;
+
+    --sidebar-background: 262 24% 10%;
+    --sidebar-foreground: 270 11% 96%;
+    --sidebar-primary: 270 11% 96%;
+    --sidebar-primary-foreground: 262 24% 18%;
+    --sidebar-accent: 262 24% 20%;
+    --sidebar-accent-foreground: 270 11% 96%;
+    --sidebar-border: 262 24% 25%;
+    --sidebar-ring: 270 11% 96%;
+
+    --support: 262 24% 20%;
+    --support-foreground: 270 11% 96%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--secondary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
