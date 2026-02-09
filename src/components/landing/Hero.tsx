@@ -23,10 +23,8 @@ const Hero = () => {
           {/* Content */}
           <div className="flex flex-col gap-8 text-center lg:text-left">
             <div className="space-y-6">
-        {/* <h1 className='font-heading text-5xl italic'>PÚBLICO</h1>
-        <h1 className='font-heading text-5xl'>público</h1> */}
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-wide text-foreground">
-                Cannabis medicinal com acompanhamento profissional e acolhedor
+                Tratamento natural com canabinoides e acompanhamento profissional e acolhedor
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
                 Entenda se o tratamento é adequado para você e tenha um plano

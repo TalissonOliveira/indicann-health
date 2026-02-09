@@ -9,7 +9,7 @@ const faqItems = [
   {
     question: "Como funciona a consulta?",
     answer:
-      "A consulta é realizada de forma individual e acolhedora. Você conversa com nossos profissionais sobre seu histórico de saúde, expectativas e dúvidas. A partir disso, avaliamos se o tratamento com cannabis medicinal pode ser indicado para o seu caso.",
+      "A consulta é realizada de forma individual e acolhedora. Você conversa com nossos profissionais sobre seu histórico de saúde, expectativas e dúvidas. A partir disso, avaliamos se a modulação do sistema endocanabinoide pode ser indicada para o seu caso.",
   },
   {
     question: "Preciso de acompanhamento?",
@@ -59,7 +59,7 @@ const FAQ = () => {
                 value={`item-${index}`}
                 className="bg-muted/50 rounded-xl px-6 border-none"
               >
-                <AccordionTrigger className="text-left text-xl font-extrabold text-foreground hover:no-underline py-5">
+                <AccordionTrigger className="text-left text-lg font-medium text-foreground hover:no-underline py-5">
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground pb-5 text-[16px] leading-relaxed">

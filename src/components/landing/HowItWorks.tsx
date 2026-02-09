@@ -74,7 +74,7 @@ const HowItWorks = () => {
           <div className="bg-card p-8 md:p-12 rounded-2xl shadow-lg">
             <div className="text-center">
               <h3 className="font-heading text-2xl md:text-3xl font-semibold text-card-foreground mb-4">
-                Pronto para dar o primeiro passo?
+                Pronto para dar o primeiro passo por apenas R$ 250,00?
               </h3>
               <p className="text-muted-foreground mb-8">
                 Entre em contato conosco pelo WhatsApp e agende sua consulta de

@@ -24,7 +24,7 @@ const ForWho = () => {
             Para quem é
           </h2>
           <p className="text-lg text-muted-foreground">
-            O acompanhamento com cannabis medicinal pode ser indicado para você se:
+            O acompanhamento com canabinoides medicinais pode ser indicado para você se:
           </p>
         </div>
 
