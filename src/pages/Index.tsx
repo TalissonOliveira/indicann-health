@@ -3,6 +3,7 @@ import Hero from "@/components/landing/Hero";
 import ForWho from "@/components/landing/ForWho";
 import Benefits from "@/components/landing/Benefits";
 import HowItWorks from "@/components/landing/HowItWorks";
+import HealthTopics from '@/components/landing/HealthTopics';
 import Testimonials from "@/components/landing/Testimonials";
 import FAQ from "@/components/landing/FAQ";
 import FinalCTA from "@/components/landing/FinalCTA";
@@ -16,6 +17,7 @@ const Index = () => {
       <main>
         <Hero />
         <ForWho />
+        <HealthTopics />
         <Benefits />
         <HowItWorks />
         <Testimonials />
