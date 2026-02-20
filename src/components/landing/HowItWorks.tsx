@@ -31,7 +31,6 @@ const HowItWorks = () => {
     <section id="como-funciona" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
-          {/* Steps */}
           <div>
             <h2 className="font-heading text-3xl md:text-4xl font-semibold tracking-wide text-foreground mb-4">
               Como funciona
@@ -43,7 +42,6 @@ const HowItWorks = () => {
             <div className="space-y-8">
               {steps.map((step, index) => (
                 <div key={index} className="flex gap-6">
-                  {/* Timeline */}
                   <div className="flex flex-col items-center">
                     <div className="w-14 h-14 bg-muted rounded-full flex items-center justify-center shrink-0">
                       <step.icon className="w-6 h-6 text-secondary" strokeWidth={1.5} />
@@ -53,7 +51,6 @@ const HowItWorks = () => {
                     )}
                   </div>
 
-                  {/* Content */}
                   <div className="pb-8">
                     <span className="text-xs font-semibold text-secondary tracking-wider">
                       PASSO {step.number}
@@ -70,7 +67,6 @@ const HowItWorks = () => {
             </div>
           </div>
 
-          {/* CTA Card */}
           <div className="bg-card p-8 md:p-12 rounded-2xl shadow-lg">
             <div className="text-center">
               <h3 className="font-heading text-2xl md:text-3xl font-semibold text-card-foreground mb-4">

@@ -18,7 +18,6 @@ const Header = () => {
 
   return (
     <>
-      {/* Mobile Backdrop */}
       {isMobileMenuOpen && (
         <button
           type="button"
@@ -51,7 +50,6 @@ const Header = () => {
               />
             </a>
 
-            {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-8">
               {NAV_LINKS.map((link) => (
                 <a
@@ -69,7 +67,6 @@ const Header = () => {
               </Button>
             </div>
 
-            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden p-2 text-foreground"
@@ -79,7 +76,6 @@ const Header = () => {
             </button>
           </nav>
 
-          {/* Mobile Navigation */}
           {isMobileMenuOpen && (
             <div className="lg:hidden absolute top-full left-0 right-0 z-50 bg-background shadow-lg border-t border-border">
               <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
