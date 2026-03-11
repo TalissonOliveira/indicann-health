@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { NAV_LINKS, WA_LINK } from "@/lib/constants";
+import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
@@ -73,7 +73,7 @@ const Header = () => {
                 ))}
 
                 <Button asChild className="rounded-lg px-6">
-                  <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+                  <a href={'#agendar'}>
                     Agendar Consulta
                   </a>
                 </Button>
@@ -104,8 +104,12 @@ const Header = () => {
                     </a>
                   ))}
 
-                  <Button asChild className="rounded-lg mt-2">
-                    <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+                  <Button
+                    asChild
+                    className="rounded-lg mt-2"
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  >
+                    <a href={'#agendar'}>
                       Agendar Consulta
                     </a>
                   </Button>

@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { WA_LINK } from "@/lib/constants";
 import { Heart, Users, Shield } from "lucide-react";
 
 const trustBadges = [
@@ -32,9 +31,9 @@ const Hero = () => {
             <Button
               asChild
               size="lg"
-              className="rounded-lg px-8 text-base font-semibold"
+              className="rounded-lg px-8 text-base font-semibold w-full max-w-xs self-center lg:self-auto"
             >
-              <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+              <a href={'#agendar'}>
                 Agendar Consulta
               </a>
             </Button>

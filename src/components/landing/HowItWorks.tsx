@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { WA_LINK } from "@/lib/constants";
 import { MessageSquare, Stethoscope, FileCheck } from "lucide-react";
 
 const steps = [
@@ -81,7 +80,7 @@ const HowItWorks = () => {
                 size="lg"
                 className="rounded-lg px-10 text-base font-semibold w-full sm:w-auto"
               >
-                <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+                <a href={'#agendar'}>
                   Agendar Consulta
                 </a>
               </Button>

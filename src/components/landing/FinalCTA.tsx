@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { WA_LINK } from "@/lib/constants";
 import { MessageCircle } from "lucide-react";
 
 const FinalCTA = () => {
@@ -19,9 +18,7 @@ const FinalCTA = () => {
             className="rounded-lg px-10 py-6 text-lg font-semibold bg-background text-foreground hover:bg-background/90"
           >
             <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={'#agendar'}
               className="inline-flex items-center gap-3"
             >
               <MessageCircle className="w-5 h-5" />
