@@ -10,7 +10,7 @@ const trustBadges = [
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 pb-16 md:pb-24">
+    <section className="relative min-h-screen flex items-center pt-36 pb-16 md:pb-24">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 right-0 w-96 h-96 bg-muted/50 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-secondary/20 rounded-full blur-3xl" />
@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="flex flex-col gap-8 text-center lg:text-left">
             <div className="space-y-6">
-              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-wide text-foreground">
+              <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-wide text-foreground">
                 Tratamento natural com canabinoides e acompanhamento profissional e acolhedor
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
@@ -29,27 +29,15 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button
-                asChild
-                size="lg"
-                className="rounded-lg px-8 text-base font-semibold"
-              >
-                <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
-                  Agendar Consulta
-                </a>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="rounded-lg px-8 text-base font-semibold border-secondary text-foreground hover:bg-muted"
-              >
-                <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
-                  Tirar dúvidas no WhatsApp
-                </a>
-              </Button>
-            </div>
+            <Button
+              asChild
+              size="lg"
+              className="rounded-lg px-8 text-base font-semibold"
+            >
+              <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+                Agendar Consulta
+              </a>
+            </Button>
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start mt-4">
               {trustBadges.map((badge) => (

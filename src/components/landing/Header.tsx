@@ -28,79 +28,96 @@ const Header = () => {
         />
       )}
 
-      <header
-        className={cn(
-          "fixed top-0 left-0 right-0 z-50 flex items-center transition-all duration-300",
-          "bg-background shadow-sm",
-          isScrolled ? "h-20" : "h-24",
-          !isScrolled && !isMobileMenuOpen && "lg:bg-transparent lg:shadow-none"
-        )}
-      >
-        <div className="container mx-auto px-4 lg:px-8 w-full">
-          <nav className="flex items-center justify-between">
-            <a href="#" className="flex items-center">
-              <img
-                src="/logo.svg"
-                alt="Medicina Sativa"
-                draggable={false}
-                className={cn(
-                  "w-auto object-contain transition-all duration-300",
-                  isScrolled ? "h-14" : "h-18 md:h-20"
-                )}
-              />
-            </a>
+      <header className="fixed top-0 left-0 right-0 z-50">
+        <div className="bg-primary text-primary-foreground">
+          <div className="container mx-auto px-4 lg:px-8">
+            <p className="text-center text-[13px] md:text-sm font-medium py-2">
+              Por apenas <strong>R$ 250,00</strong> profissionais especialistas em
+              Medicina Cannábica
+            </p>
+          </div>
+        </div>
 
-            <div className="hidden lg:flex items-center gap-8">
-              {NAV_LINKS.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
-              <Button asChild className="rounded-lg px-6">
-                <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
-                  Agendar Consulta
-                </a>
-              </Button>
-            </div>
+        <div
+          className={cn(
+            "flex items-center transition-all duration-300",
+            "bg-background shadow-sm",
+            isScrolled ? "h-20" : "h-24",
+            !isScrolled && !isMobileMenuOpen && "lg:bg-transparent lg:shadow-none"
+          )}
+        >
+          <div className="container mx-auto px-4 lg:px-8 w-full">
+            <nav className="flex items-center justify-between">
 
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-foreground"
-              aria-label="Menu"
-            >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </nav>
+              <a href="#" className="flex items-center">
+                <img
+                  src="/logo.svg"
+                  alt="Medicina Sativa"
+                  draggable={false}
+                  className={cn(
+                    "w-auto object-contain transition-all duration-300",
+                    isScrolled ? "h-14" : "h-14 md:h-20"
+                  )}
+                />
+              </a>
 
-          {isMobileMenuOpen && (
-            <div className="lg:hidden absolute top-full left-0 right-0 z-50 bg-background shadow-lg border-t border-border">
-              <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
+              <div className="hidden lg:flex items-center gap-8">
                 {NAV_LINKS.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-base font-medium text-foreground/80 hover:text-foreground transition-colors py-2"
+                    className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
                   >
                     {link.label}
                   </a>
                 ))}
-                <Button asChild className="rounded-lg mt-2">
+
+                <Button asChild className="rounded-lg px-6">
                   <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
                     Agendar Consulta
                   </a>
                 </Button>
               </div>
-            </div>
-          )}
+
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="lg:hidden p-2 text-foreground"
+                aria-label="Menu"
+              >
+                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+
+            </nav>
+
+            {isMobileMenuOpen && (
+              <div className="lg:hidden absolute top-full left-0 right-0 z-50 bg-background shadow-lg border-t border-border">
+                <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
+
+                  {NAV_LINKS.map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="text-base font-medium text-foreground/80 hover:text-foreground transition-colors py-2"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+
+                  <Button asChild className="rounded-lg mt-2">
+                    <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+                      Agendar Consulta
+                    </a>
+                  </Button>
+
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </header>
     </>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
