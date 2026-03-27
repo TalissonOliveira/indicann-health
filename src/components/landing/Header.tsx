@@ -32,8 +32,7 @@ const Header = () => {
         <div className="bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 lg:px-8">
             <p className="text-center text-[13px] md:text-sm font-medium py-2">
-              Por apenas <strong>R$ 250,00</strong> profissionais especialistas em
-              Medicina Cannábica
+              Agende uma consulta on-line por apenas <strong>R$ 250,00</strong> reais com profissional especialista em Medicina Canábica.
             </p>
           </div>
         </div>

@@ -3,7 +3,7 @@ import { MessageCircle } from "lucide-react";
 
 const FinalCTA = () => {
   return (
-    <section id="contato" className="py-20 md:py-28 bg-primary text-primary-foreground">
+    <section id="contato" className="py-20 md:py-28 bg-primary text-primary-foreground scroll-mt-36 sm:scroll-mt-32">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wide mb-6">

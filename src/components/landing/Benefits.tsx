@@ -42,7 +42,7 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <section id="beneficios" className="py-16 md:py-24 bg-muted/40">
+    <section id="beneficios" className="py-16 md:py-24 bg-muted/40 scroll-mt-36 sm:scroll-mt-32">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-14">
           <h2 className="font-heading text-3xl md:text-4xl font-semibold tracking-wide text-foreground mb-4">
